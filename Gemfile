@@ -41,3 +41,4 @@ gem 'spring',        group: :development
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'bootswatch-rails'
