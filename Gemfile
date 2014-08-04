@@ -46,6 +46,9 @@ gem 'autoprefixer-rails'
 gem 'bootswatch-rails'
 gem 'font-awesome-sass'
 
+# themoviedb api
+gem 'themoviedb'
+
 # tools
 group :development do
   gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
