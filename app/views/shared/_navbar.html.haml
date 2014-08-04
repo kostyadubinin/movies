@@ -12,7 +12,7 @@
         Movies
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav
+      -# %ul.nav.navbar-nav
         %li.active
           %a{href: "#"} Link
         %li
@@ -36,10 +36,10 @@
               %a{href: "#"} One more separated link
       %form.navbar-form.navbar-left{role: "search"}
         .form-group
-          %input.form-control{placeholder: "Search", type: "text"}/
+          %input.form-control{placeholder: "Search (coming soon)", type: "text", disabled: true}
         -# %button.btn.btn-default{type: "submit"} Submit
       %ul.nav.navbar-nav.navbar-right
-        %li
+        -# %li
           %a{href: "#"} Link
         %li.dropdown
           %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
