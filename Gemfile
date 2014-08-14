@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 group :production do
+  gem 'pg'
   gem 'rails_12factor'
 end
 
