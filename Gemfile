@@ -7,6 +7,10 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :development, :test do
+  gem 'sqlite3'
+end
+
 # default gems
 gem 'rails', '4.1.4'
 gem 'sass-rails', '~> 4.0.3'
