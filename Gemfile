@@ -5,6 +5,8 @@ ruby '2.1.2'
 # themoviedb api
 gem 'themoviedb'
 
+gem 'figaro'
+
 # css
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
