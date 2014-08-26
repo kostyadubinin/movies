@@ -2,6 +2,21 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
+# themoviedb api
+gem 'themoviedb'
+
+# css
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'bootswatch-rails'
+gem 'font-awesome-sass'
+
+group :development do
+  # tools
+  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
+  gem 'pry-byebug'
+end
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
@@ -22,18 +37,3 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'haml-rails'
-
-# css
-gem 'bootstrap-sass'
-gem 'autoprefixer-rails'
-gem 'bootswatch-rails'
-gem 'font-awesome-sass'
-
-# themoviedb api
-gem 'themoviedb'
-
-# tools
-group :development do
-  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
-  gem 'pry-byebug'
-end
