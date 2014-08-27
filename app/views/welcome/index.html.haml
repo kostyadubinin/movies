@@ -1,1 +1,6 @@
-%h1 Welcome to Movies
+%h1 Popular Movies
+
+.row
+  - @movies.each do |movie|
+    .col-xs-6.col-sm-4.col-md-3.col-lg-2
+      %a.thumbnail= image_tag(poster_url(movie), alt: movie.title)
