@@ -22,17 +22,23 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-# themoviedb api
-gem 'themoviedb'
-
 gem 'haml-rails'
-gem 'figaro'
 
 # css
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'bootswatch-rails'
 gem 'font-awesome-sass'
+
+# themoviedb api
+gem 'themoviedb'
+
+gem 'figaro'
+
+# tests
+group :development, :test do
+  gem 'rspec-rails'
+end
 
 # tools
 group :development do
