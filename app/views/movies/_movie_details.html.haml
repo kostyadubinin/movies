@@ -1,0 +1,29 @@
+%table.table.table-striped
+  %tbody
+    %tr
+      %td Rating
+      %td
+        %span.badge= @movie.vote_average
+    %tr
+      %td Status
+      %td= @movie.status
+    %tr
+      %td Release Date
+      %td= @movie.release_date
+    %tr
+      %td Runtime
+      %td= pluralize(@movie.runtime, 'minute')
+    %tr
+      %td Budget
+      %td= number_to_currency(@movie.budget, precision: 0)
+    %tr
+      %td Revenue
+      %td= number_to_currency(@movie.revenue, precision: 0)
+    %tr
+      %td Genres
+      %td
+        - @movie.genres.each do |genre|
+          %span.label.label-info= genre.name
+    %tr
+      %td Production Companies
+      %td= @movie.production_companies.map(&:name).join('; ')

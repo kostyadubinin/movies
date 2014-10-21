@@ -1,0 +1,10 @@
+.row
+  .col-sm-6.col-md-4
+    = image_tag(poster_url(@movie), alt: @movie.title, class: 'img-responsive thumbnail')
+  .col-sm-6.col-md-8
+    = render 'movie_details'
+
+  .col-sm-12
+    .jumbotron
+      %h1= @movie.title
+      %p= @movie.overview
