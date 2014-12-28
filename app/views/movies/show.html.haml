@@ -1,2 +1,4 @@
-= image_tag poster_url(@movie, size: 'w780'),
-  alt: @movie.title, class: 'img-responsive center-block'
+.row
+  .col-xs-12
+    = image_tag poster_url(@movie, size: 'w780'),
+      alt: @movie.title, class: 'img-responsive center-block'
