@@ -1,7 +1,6 @@
 module ApplicationHelper
-  def poster_url(movie)
-    poster_size = 'w342'
-    configuration.base_url + poster_size + movie.poster_path
+  def poster_url(movie, size: 'w342')
+    configuration.base_url + size.to_s + movie.poster_path
   end
 
   private
