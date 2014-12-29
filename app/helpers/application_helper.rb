@@ -3,6 +3,10 @@ module ApplicationHelper
     configuration.base_url + size.to_s + movie.poster_path
   end
 
+  def youtube_url(source)
+    "//www.youtube.com/embed/#{source}"
+  end
+
   private
 
   # TODO: Cache this. From the documentation:
