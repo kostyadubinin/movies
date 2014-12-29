@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resources :movies, only: %w(index show)
 
+  # auth
+  get 'auth/:provider/callback', to: 'sessions#create'
+  delete 'sign_out', to: 'sessions#destroy', as: 'sign_out'
+
   # You can have the root of your site routed with "root"
   root 'movies#index'
 

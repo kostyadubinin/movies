@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+  omniauth_callbacks:
+    success: "Successfully authenticated from %{kind} account."
+    failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+  sessions:
+    signed_out: "Signed out successfully."

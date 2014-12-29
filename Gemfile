@@ -25,6 +25,9 @@ end
 
 gem 'haml-rails'
 
+# auth
+gem 'omniauth-facebook'
+
 # css
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
