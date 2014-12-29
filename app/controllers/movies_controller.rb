@@ -4,6 +4,6 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Tmdb::Movie.detail(params[:id])
+    @movie = Tmdb::Movie.detail(params[:id], append_to_response: 'trailers')
   end
 end

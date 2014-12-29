@@ -1,0 +1,8 @@
+%span.label.label-info= Time.parse(@movie.release_date).strftime("%B %Y")
+
+- unless @movie.budget.zero?
+  %span.label.label-info= number_to_currency(@movie.budget, precision: 0)
+
+%span.label.label-info
+  %i.fa.fa-star
+  = @movie.vote_average
