@@ -9,5 +9,28 @@
 
 %p.text-justify= movie.overview
 
-- if movie.homepage.present?
-  %p= link_to 'Official Homepage', movie.homepage
+.row
+  .col-md-6
+    %h2 Cast
+
+    .table-responsive
+      %table.table.table-striped.table-hover.table-condensed
+        %tbody
+          - movie.credits.cast[0...5].each do |cast|
+            %tr
+              %td= cast.character
+              %td= cast.name
+
+  .col-md-6
+    %h2 Crew
+
+    .table-responsive
+      %table.table.table-striped.table-hover.table-condensed
+        %tbody
+          - movie.credits.crew[0...5].each do |member|
+            %tr
+              %td= member.job
+              %td= member.name
+
+- if @movie.homepage.present?
+  %p= link_to 'Homepage', @movie.homepage
