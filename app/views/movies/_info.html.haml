@@ -1,13 +1,10 @@
-%p
-  = render 'info_badges'
+%p= render 'info_badges'
 
-%p
-  %span.text-muted= movie.genres.map(&:name).join(' | ')
-
-  - if movie.belongs_to_collection
-    %span.text-muted.pull-right= movie.belongs_to_collection.name
+%p.text-muted= movie.genres.map(&:name).join(' | ')
 
 %p.text-justify= movie.overview
+- if movie.belongs_to_collection
+  %p.text-muted= movie.belongs_to_collection.name
 
 .row
   .col-md-6
