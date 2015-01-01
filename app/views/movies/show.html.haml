@@ -20,7 +20,10 @@
     %p.text-justify= @movie.overview
 
     - if @movie.homepage.present?
-      %p= link_to 'Official Homepage', @movie.homepage, target: '_blank'
+      %p
+        = link_to @movie.homepage, target: '_blank' do
+          Official Homepage
+          %i.fa.fa-external-link
 
   .col-xs-12
     %hr
