@@ -1,6 +1,8 @@
 .row
   .col-xs-12
-    %h1 Popular Movies
+    %h1 Movies
+
+    = render 'movie_filters_nav'
 
 .row
   - @movies.each do |movie|

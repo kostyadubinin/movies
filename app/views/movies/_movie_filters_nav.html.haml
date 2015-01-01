@@ -1,0 +1,5 @@
+%ul.nav.nav-pills.movie-filters
+  = active_link_to 'Popular', popular_movies_path, wrap_tag: :li, active: /^\/$|popular/
+  = active_link_to 'Top Rated', top_rated_movies_path, wrap_tag: :li
+  = active_link_to 'Upcoming', upcoming_movies_path, wrap_tag: :li
+  = active_link_to 'Now Playing', now_playing_movies_path, wrap_tag: :li
