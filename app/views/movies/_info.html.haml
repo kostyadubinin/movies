@@ -1,0 +1,13 @@
+%p
+  = render 'info_budges'
+
+%p
+  %span.text-muted= movie.genres.map(&:name).join(' | ')
+
+  - if movie.belongs_to_collection
+    %span.text-muted.pull-right= movie.belongs_to_collection.name
+
+%p.text-justify= movie.overview
+
+- if movie.homepage.present?
+  %p= link_to 'Official Homepage', movie.homepage

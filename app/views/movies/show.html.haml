@@ -12,18 +12,7 @@
         %small.text-muted= @movie.tagline
 
   .col-sm-9
-    %p= render 'info_budges'
-
-    - if @movie.belongs_to_collection
-      %p.text-muted= @movie.belongs_to_collection.name
-
-    %p.text-justify= @movie.overview
-
-    - if @movie.homepage.present?
-      %p
-        = link_to @movie.homepage, target: '_blank' do
-          Official Homepage
-          %i.fa.fa-external-link
+    = render 'info', movie: @movie
 
 .row
   - if @movie.trailers.youtube.present?
