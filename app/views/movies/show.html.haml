@@ -14,6 +14,11 @@
   .col-sm-9
     = render 'info', movie: @movie
 
-.row
-  - if @movie.trailers.youtube.present?
-    = render partial: 'trailers', object: @movie.trailers.youtube[0...2]
+- if @movie.trailers.youtube.present?
+  .row
+    .col-xs-12
+      %h2 Videos
+
+    - @movie.trailers.youtube[0...2].each do |trailer|
+      .col-xs-12.col-sm-6
+        = render partial: 'trailer', object: trailer
