@@ -37,6 +37,7 @@ gem 'font-awesome-sass'
 # themoviedb api
 gem 'themoviedb'
 
+gem 'active_link_to'
 gem 'figaro'
 
 # tests
