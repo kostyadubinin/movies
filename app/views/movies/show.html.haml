@@ -4,7 +4,7 @@
       = @movie.title
 
 .row
-  .col-sm-3.hidden-xs
+  .col-sm-3
     = image_tag poster_url(@movie), class: 'img-responsive center-block'
 
     - if @movie.tagline.present?
