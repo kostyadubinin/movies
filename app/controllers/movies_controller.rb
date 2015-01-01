@@ -4,6 +4,7 @@ class MoviesController < ApplicationController
   end
 
   def show
+    # TODO: Handle invalid ids.
     @movie = Tmdb::Movie.detail(params[:id], append_to_response: 'trailers,credits')
   end
 end
