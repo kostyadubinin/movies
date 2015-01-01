@@ -25,11 +25,6 @@
           Official Homepage
           %i.fa.fa-external-link
 
-  .col-xs-12
-    %hr
-
 .row
-  - @movie.trailers.youtube[0...2].each do |trailer|
-    .col-xs-12.col-sm-6
-      .embed-responsive.embed-responsive-16by9
-        %iframe.embed-responsive-item{src: youtube_url(trailer.source), allowfullscreen: true}
+  - if @movie.trailers.youtube.present?
+    = render partial: 'trailers', object: @movie.trailers.youtube[0...2]
