@@ -1,6 +1,6 @@
 module ApplicationHelper
   def poster_url(movie, size: 'w342')
-    configuration.base_url + size.to_s + movie.poster_path
+    "#{configuration.base_url}#{size}#{movie.poster_path}"
   end
 
   def youtube_url(source)
