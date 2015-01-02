@@ -1,21 +1,21 @@
 class MoviesController < ApplicationController
   def popular
-    @movies = Tmdb::Movie.popular || []
+    @movies = Tmdb::Movie.popular
     render 'index'
   end
 
   def top_rated
-    @movies = Tmdb::Movie.top_rated || []
+    @movies = Tmdb::Movie.top_rated
     render 'index'
   end
 
   def now_playing
-    @movies = Tmdb::Movie.now_playing || []
+    @movies = Tmdb::Movie.now_playing
     render 'index'
   end
 
   def upcoming
-    @movies = Tmdb::Movie.upcoming || []
+    @movies = Tmdb::Movie.upcoming
     render 'index'
   end
 

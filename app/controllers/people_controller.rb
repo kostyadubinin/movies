@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
   def index
-    @people = Tmdb::Person.popular || []
+    @people = Tmdb::Person.popular
   end
 
   def show
