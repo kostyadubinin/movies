@@ -1,0 +1,11 @@
+.row
+  .col-xs-12
+    %h1.page-header Popular People
+
+  - @people.each do |person|
+    .col-xs-6.col-sm-4.col-md-3.col-lg-3
+      .thumbnail
+        = link_to person_path(person.id) do
+          = image_tag profile_path(person), alt: person.name
+        .caption
+          %h3= person.name

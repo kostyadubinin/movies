@@ -10,6 +10,8 @@
         %i.fa.fa-home
         Movies
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        = active_link_to 'People', people_path, wrap_tag: :li
       %ul.nav.navbar-nav.navbar-right
         = render 'shared/auth_links'
         %li.dropdown

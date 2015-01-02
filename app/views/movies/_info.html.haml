@@ -16,7 +16,7 @@
           - movie.credits.cast[0...5].each do |cast|
             %tr
               %td= cast.character
-              %td= cast.name
+              %td= link_to cast.name, person_path(cast.id)
 
   .col-md-6
     %h2 Crew
