@@ -1,6 +1,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-image: url(image_path('subtle_grunge.png'));
 }
 
 #profile_image {
@@ -17,4 +18,14 @@ body {
 
 h1.page-header {
   margin-top: 20px;
+}
+
+// Fix the flash close button.
+.close {
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+  color: black;
+  opacity: 0.6;
 }
