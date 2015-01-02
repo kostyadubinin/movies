@@ -1,8 +1,5 @@
 .row
-  .col-xs-12
-    %h1 Movies
-
-    = render 'movie_filters_nav'
+  .col-xs-12= render 'movie_filters_nav'
 
 .row
   - @movies.each_with_index do |movie, i|
