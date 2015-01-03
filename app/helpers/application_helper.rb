@@ -1,8 +1,4 @@
 module ApplicationHelper
-  def profile_path(person, size: 'w300')
-    "#{configuration.base_url}#{size}#{person.profile_path}"
-  end
-
   def youtube_url(source)
     "//www.youtube.com/embed/#{source}"
   end

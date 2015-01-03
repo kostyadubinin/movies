@@ -2,9 +2,8 @@
   .col-xs-12
     %h1.page-header= @person.name
 
-.row
   .col-sm-3
-    = image_tag profile_path(@person), class: 'img-responsive center-block'
+    = image_tag @person.profile_url, class: 'img-responsive center-block'
 
   .col-sm-9
     %h2 Filmography
