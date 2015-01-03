@@ -26,11 +26,17 @@ class MovieDecorator < Draper::Decorator
   end
 
   def cast
-    @cast ||= CastDecorator.decorate_collection(credits.cast)[0...5]
+    CastDecorator.decorate_collection(credits.cast)
   end
 
   def crew
-    @crew ||= CrewDecorator.decorate_collection(credits.crew)[0...5]
+    crew = CrewDecorator.decorate_collection(credits.crew)
+    crew = crew.group_by { |m| m.department }
+    test = crew.each do |department, members|
+      crew[department] = members.group_by { |m| m.job }
+    end
+
+    test
   end
 
   def poster_url(size: 'w342')
