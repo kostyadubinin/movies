@@ -15,13 +15,13 @@ class MovieDecorator < Draper::Decorator
 
   def runtime
     handle_none object.runtime do
-      runtime
+      object.runtime
     end
   end
 
   def vote_average
     handle_none object.vote_average do
-      vote_average
+      object.vote_average
     end
   end
 
