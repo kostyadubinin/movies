@@ -29,7 +29,7 @@
     .table-responsive
       %table.table.table-striped.table-condensed
         %tbody
-          - movie.credits.cast[0...5].each do |cast|
+          - movie.cast.each do |cast|
             %tr
               %td= cast.character
               %td= link_to cast.name, person_path(cast.id)
@@ -40,7 +40,7 @@
     .table-responsive
       %table.table.table-striped.table-condensed
         %tbody
-          - movie.credits.crew[0...5].each do |member|
+          - movie.crew.each do |member|
             %tr
               %td= member.job
               %td= member.name
