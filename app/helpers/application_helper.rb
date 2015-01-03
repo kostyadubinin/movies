@@ -1,12 +1,4 @@
 module ApplicationHelper
-  def poster_url(movie, size: 'w342')
-    if movie.poster_path
-      "#{configuration.base_url}#{size}#{movie.poster_path}"
-    else
-      "http://dummyimage.com/342x513/d9d9d9/000000.png&text=N/A"
-    end
-  end
-
   def profile_path(person, size: 'w300')
     "#{configuration.base_url}#{size}#{person.profile_path}"
   end
@@ -14,8 +6,6 @@ module ApplicationHelper
   def youtube_url(source)
     "//www.youtube.com/embed/#{source}"
   end
-
-  private
 
   # TODO: Cache this. From the documentation:
   #
