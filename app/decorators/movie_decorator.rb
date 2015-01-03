@@ -25,6 +25,14 @@ class MovieDecorator < Draper::Decorator
     end
   end
 
+  def cast
+    @cast ||= CastDecorator.decorate_collection(credits.cast)[0...5]
+  end
+
+  def crew
+    @crew ||= CrewDecorator.decorate_collection(credits.crew)[0...5]
+  end
+
   def poster_url(size: 'w342')
     if poster_path
       "#{h.configuration.base_url}#{size}#{poster_path}"
