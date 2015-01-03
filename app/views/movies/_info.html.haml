@@ -29,10 +29,10 @@
     .table-responsive
       %table.table.table-striped.table-condensed
         %tbody
-          - movie.cast.each do |cast|
+          - movie.cast.each do |member|
             %tr
-              %td= cast.character
-              %td= link_to cast.name, person_path(cast.id)
+              %td= member.character
+              %td= link_to member.name, person_path(member.id)
 
   .col-md-6
     %h2 Crew
@@ -43,4 +43,4 @@
           - movie.crew.each do |member|
             %tr
               %td= member.job
-              %td= member.name
+              %td= link_to member.name, person_path(member.id)
