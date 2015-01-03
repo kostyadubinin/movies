@@ -1,6 +1,6 @@
 class Movie
   class << self
-    delegate :latest, :popular, :top_rated, :now_playing, :upcoming, to: Tmdb::Movie
+    delegate :popular, :top_rated, :now_playing, :upcoming, to: Tmdb::Movie
 
     def find(*params)
       # TODO: Handle invalid ids.
