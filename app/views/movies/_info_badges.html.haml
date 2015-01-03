@@ -1,10 +1,13 @@
-%span.label.label-info= Time.parse(movie.release_date).strftime("%B %Y")
+- if movie.release_date.present?
+  %span.label.label-info= movie.release_date
 
-- unless movie.budget.zero?
-  %span.label.label-info= number_to_currency(movie.budget, precision: 0)
+- if movie.budget.present?
+  %span.label.label-info= movie.budget
 
-%span.label.label-info #{movie.runtime} min
+- if movie.runtime.present?
+  %span.label.label-info #{movie.runtime} min
 
-%span.label.label-info
-  %i.fa.fa-star
-  = movie.vote_average
+- if movie.vote_average.present?
+  %span.label.label-info
+    %i.fa.fa-star
+    = movie.vote_average
