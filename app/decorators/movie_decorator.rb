@@ -1,6 +1,30 @@
 class MovieDecorator < Draper::Decorator
   delegate_all
 
+  def release_date
+    handle_none object.release_date do
+      Time.parse(object.release_date).strftime("%B %Y")
+    end
+  end
+
+  def budget
+    handle_none object.budget do
+      h.number_to_currency(object.budget, precision: 0)
+    end
+  end
+
+  def runtime
+    handle_none object.runtime do
+      runtime
+    end
+  end
+
+  def vote_average
+    handle_none object.vote_average do
+      vote_average
+    end
+  end
+
   def poster_url(size: 'w342')
     if poster_path
       "#{h.configuration.base_url}#{size}#{poster_path}"
@@ -11,5 +35,15 @@ class MovieDecorator < Draper::Decorator
 
   def trailers
     object.trailers.youtube[0...2]
+  end
+
+  private
+
+  def handle_none(value)
+    if value.present? && value != 0
+      yield
+    else
+      nil
+    end
   end
 end
