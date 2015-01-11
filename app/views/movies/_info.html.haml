@@ -25,21 +25,21 @@
 .row
   .col-md-6
     %dl.dl-horizontal
-      - movie.cast.each do |member|
-        %dt= member.character
-        %dd= link_to member.name, person_path(member.id)
+      = render partial: 'cast', object: movie.cast_head
+      .collapse#castTail
+        = render partial: 'cast', object: movie.cast_tail
+    %dl.dl-horizontal
+      %dd
+        %a#cast_toggle_button.btn.btn-primary.btn-sm(data-toggle="collapse" href="#castTail" aria-expanded="false" aria-controls="castTail")
+          %i.fa.fa-angle-double-down.fa-lg
+          More
 
   .col-md-6
-    - movie.crew.each do |department, members|
-      %dl.dl-horizontal
-        %dt.text-uppercase= department
-        %dd
-
-        - members.each do |job, members|
-          - first_member, *rest_members = members
-
-          %dt= job
-          %dd= link_to first_member.name, person_path(first_member.id)
-          - rest_members.each do |member|
-            %dt
-            %dd= link_to member.name, person_path(member.id)
+    = render partial: 'crew', object: movie.crew_head
+    .collapse#crewTail
+      = render partial: 'crew', object: movie.crew_tail
+    %dl.dl-horizontal
+      %dd
+        %a#crew_toggle_button.btn.btn-primary.btn-sm(data-toggle="collapse" href="#crewTail" aria-expanded="false" aria-controls="crewTail")
+          %i.fa.fa-angle-double-down.fa-lg
+          More
