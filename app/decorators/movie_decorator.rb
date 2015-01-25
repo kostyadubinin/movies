@@ -34,7 +34,7 @@ class MovieDecorator < Draper::Decorator
   end
 
   def cast_tail
-    cast[5..-1]
+    cast - cast_head
   end
 
   def crew
