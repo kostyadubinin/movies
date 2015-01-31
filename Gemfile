@@ -37,6 +37,8 @@ gem 'font-awesome-sass'
 # themoviedb api
 gem 'themoviedb'
 
+gem "faraday"
+gem "faraday_middleware"
 gem 'draper'
 gem 'active_link_to'
 gem 'figaro'
