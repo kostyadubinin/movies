@@ -34,9 +34,6 @@ gem 'autoprefixer-rails'
 gem 'bootswatch-rails'
 gem 'font-awesome-sass'
 
-# themoviedb api
-gem 'themoviedb'
-
 gem "faraday"
 gem "faraday_middleware"
 gem 'draper'
