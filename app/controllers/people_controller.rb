@@ -4,8 +4,6 @@ class PeopleController < ApplicationController
   end
 
   def show
-    @person = PersonDecorator.decorate(
-      Person.find(params[:id], append_to_response: 'movie_credits') || []
-    )
+    @person = PersonDecorator.decorate(Person.find(params[:id]))
   end
 end

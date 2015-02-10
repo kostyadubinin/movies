@@ -1,10 +1,11 @@
 class Person
-  class << self
-    delegate :latest, :popular, to: Tmdb::Person
+  def self.popular
+    response = $tmdb.get "person/popular"
+    response.body["results"]
+  end
 
-    def find(*params)
-      # TODO: Handle invalid ids.
-      Tmdb::Person.detail(*params)
-    end
+  def self.find(id)
+    response = $tmdb.get "person/#{id}"
+    response.body
   end
 end
