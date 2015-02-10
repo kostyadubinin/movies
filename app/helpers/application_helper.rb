@@ -9,7 +9,8 @@ module ApplicationHelper
   #   and check for updates every few days.
   #
   def configuration
-    @configuration ||= Tmdb::Configuration.new
+    @configuration ||=
+      ConfigurationDecorator.decorate($tmdb.get('configuration').body)
   end
 
   def flash_class(level)
