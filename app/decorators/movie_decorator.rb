@@ -25,36 +25,6 @@ class MovieDecorator < Draper::Decorator
     end
   end
 
-  def cast
-    CastDecorator.decorate_collection(credits.cast)
-  end
-
-  def cast_head
-    cast[0..4]
-  end
-
-  def cast_tail
-    cast - cast_head
-  end
-
-  def crew
-    crew = CrewDecorator.decorate_collection(credits.crew)
-    crew = crew.group_by { |m| m.department }
-    test = crew.each do |department, members|
-      crew[department] = members.group_by { |m| m.job }
-    end
-
-    test
-  end
-
-  def crew_head
-    crew.select { |department, _| department == 'Directing' }
-  end
-
-  def crew_tail
-    crew.select { |department, _| department != 'Directing' }
-  end
-
   def poster_url(size: 'w342')
     if poster_path
       "#{h.configuration.base_url}#{size}#{poster_path}"
