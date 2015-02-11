@@ -9,8 +9,9 @@ module ApplicationHelper
   #   and check for updates every few days.
   #
   def configuration
-    @configuration ||=
+    Rails.cache.fetch("tmdb/configuration", expires_in: 1.day) do
       ConfigurationDecorator.decorate($tmdb.get('configuration').body)
+    end
   end
 
   def flash_class(level)
