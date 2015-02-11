@@ -23,4 +23,9 @@ class Movie
     response = $tmdb.get "movie/#{id}", append_to_response: 'trailers,credits'
     response.body
   end
+
+  def self.latest
+    response = $tmdb.get "movie/latest", append_to_response: 'trailers,credits'
+    response.body
+  end
 end
