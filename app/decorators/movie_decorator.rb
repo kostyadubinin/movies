@@ -24,7 +24,9 @@ class MovieDecorator < Draper::Decorator
   end
 
   def youtube_trailers
-    TrailerDecorator.decorate_collection(object["trailers"]["youtube"])
+    if object["trailers"].try(:[], "youtube")
+      TrailerDecorator.decorate_collection(object["trailers"]["youtube"])
+    end
   end
 
   def belongs_to_collection
