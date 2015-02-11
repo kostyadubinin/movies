@@ -20,8 +20,6 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = MovieDecorator.decorate(
-      Movie.find(params[:id], append_to_response: 'trailers,credits')
-    )
+    @movie = MovieDecorator.decorate(Movie.find(params[:id]))
   end
 end

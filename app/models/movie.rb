@@ -1,10 +1,31 @@
 class Movie
-  class << self
-    delegate :popular, :top_rated, :now_playing, :upcoming, to: Tmdb::Movie
+  def self.popular
+    response = $tmdb.get "movie/popular"
+    response.body["results"]
+  end
 
-    def find(*params)
-      # TODO: Handle invalid ids.
-      Tmdb::Movie.detail(*params)
-    end
+  def self.top_rated
+    response = $tmdb.get "movie/top_rated"
+    response.body["results"]
+  end
+
+  def self.now_playing
+    response = $tmdb.get "movie/now_playing"
+    response.body["results"]
+  end
+
+  def self.upcoming
+    response = $tmdb.get "movie/upcoming"
+    response.body["results"]
+  end
+
+  def self.find(id)
+    response = $tmdb.get "movie/#{id}", append_to_response: "trailers,credits"
+    response.body
+  end
+
+  def self.latest
+    response = $tmdb.get "movie/latest", append_to_response: "trailers,credits"
+    response.body
   end
 end

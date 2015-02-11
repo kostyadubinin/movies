@@ -21,25 +21,3 @@
 
 - if movie.belongs_to_collection
   %p.text-muted= movie.belongs_to_collection.name
-
-.row
-  .col-md-6
-    %dl.dl-horizontal
-      = render partial: 'cast', object: movie.cast_head
-      .collapse#castTail
-        = render partial: 'cast', object: movie.cast_tail
-    %dl.dl-horizontal
-      %dd
-        %a#cast_toggle_button.btn.btn-primary.btn-sm(data-toggle="collapse" href="#castTail" aria-expanded="false" aria-controls="castTail")
-          %i.fa.fa-angle-double-down.fa-lg
-          More
-
-  .col-md-6
-    = render partial: 'crew', object: movie.crew_head
-    .collapse#crewTail
-      = render partial: 'crew', object: movie.crew_tail
-    %dl.dl-horizontal
-      %dd
-        %a#crew_toggle_button.btn.btn-primary.btn-sm(data-toggle="collapse" href="#crewTail" aria-expanded="false" aria-controls="crewTail")
-          %i.fa.fa-angle-double-down.fa-lg
-          More

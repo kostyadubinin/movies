@@ -3,11 +3,4 @@
     %h1.page-header= @person.name
 
   .col-sm-3
-    = image_tag @person.profile_url, class: 'img-responsive center-block'
-
-  .col-sm-9
-    %h2 Filmography
-
-    %ul
-    - @person.movie_credits.cast.each do |movie|
-      %li= link_to movie.title, movie_path(movie.id)
+    = image_tag @person.profile_url, alt: @person.name, class: 'img-responsive center-block'
