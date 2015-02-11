@@ -57,7 +57,7 @@ class MovieDecorator < Draper::Decorator
     end
   end
 
-  def poster_url(size: 'w342')
+  def poster_url(size: "w342")
     if poster_path.present?
       "#{h.configuration.base_url}#{size}#{poster_path}"
     else
