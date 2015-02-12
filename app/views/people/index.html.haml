@@ -2,10 +2,11 @@
   .col-xs-12
     %h1.page-header Popular People
 
-  - @people.each do |person|
+  - @people.to_enum.with_index(1).each do |person, i|
     .col-xs-6.col-sm-4.col-md-3.col-lg-3
       .thumbnail
         = link_to person_path(person.id) do
           = image_tag person.profile_url, alt: person.name
         .caption
           %h5= person.name
+    = responsive_columns_fix(i, xs: 2, sm: 3, md: 4, lg: 4)
