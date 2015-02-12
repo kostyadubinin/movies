@@ -1,23 +1,9 @@
 %p
-  - if movie.release_date.present?
-    %span.label.label-info= movie.release_date
+  %span.label.label-info= movie.release_date
+  %span.label.label-info= movie.budget
+  %span.label.label-info= movie.runtime
+  %span.label.label-info= movie.vote_average
 
-  - if movie.budget.present?
-    %span.label.label-info= movie.budget
-
-  - if movie.runtime.present?
-    %span.label.label-info #{movie.runtime} min
-
-  - if movie.vote_average.present?
-    %span.label.label-info
-      %i.fa.fa-star
-      = movie.vote_average
-
-- if movie.genres.present?
-  %p.text-muted= movie.genres.map(&:name).join(' | ')
-
-- if movie.overview.present?
-  %p.text-justify= movie.overview
-
-- if movie.belongs_to_collection
-  %p.text-muted= movie.belongs_to_collection.name
+%p.text-muted= movie.genres_names
+%p.text-justify= movie.overview
+%p.text-muted= movie.collection_name

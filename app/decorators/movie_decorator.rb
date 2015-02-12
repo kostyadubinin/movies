@@ -23,6 +23,10 @@ class MovieDecorator < Draper::Decorator
     GenreDecorator.decorate_collection(object["genres"])
   end
 
+  def genres_names
+    genres.map(&:name).join(' | ')
+  end
+
   def youtube_trailers
     if object["trailers"].try(:[], "youtube")
       TrailerDecorator.decorate_collection(object["trailers"]["youtube"])
@@ -33,6 +37,10 @@ class MovieDecorator < Draper::Decorator
     if object["belongs_to_collection"].present?
       CollectionDecorator.decorate(object["belongs_to_collection"])
     end
+  end
+
+  def collection_name
+    belongs_to_collection.name if belongs_to_collection
   end
 
   def release_date
@@ -49,13 +57,14 @@ class MovieDecorator < Draper::Decorator
 
   def runtime
     unless object["runtime"].to_i.zero?
-      object["runtime"]
+      "#{object["runtime"]} min"
     end
   end
 
   def vote_average
     unless object["vote_average"].to_f.zero?
-      object["vote_average"]
+      h.render(partial: 'movies/helper/vote_average',
+               object: object["vote_average"])
     end
   end
 
