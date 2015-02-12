@@ -24,6 +24,10 @@ class PersonDecorator < Draper::Decorator
   # end
 
   def profile_url(size: 'w300')
-    "#{h.configuration.base_url}#{size}#{object["profile_path"]}"
+    if profile_path.present?
+      "#{h.configuration.base_url}#{size}#{object["profile_path"]}"
+    else
+      "http://dummyimage.com/300x450/d9d9d9/000000.png&text=N/A"
+    end
   end
 end
