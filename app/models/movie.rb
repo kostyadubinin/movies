@@ -1,22 +1,22 @@
 class Movie
-  def self.popular
-    response = $tmdb.get "movie/popular"
-    response.body["results"]
+  def self.popular(page: 1)
+    response = $tmdb.get "movie/popular", page: page
+    response.body
   end
 
-  def self.top_rated
-    response = $tmdb.get "movie/top_rated"
-    response.body["results"]
+  def self.top_rated(page: 1)
+    response = $tmdb.get "movie/top_rated", page: page
+    response.body
   end
 
-  def self.now_playing
-    response = $tmdb.get "movie/now_playing"
-    response.body["results"]
+  def self.now_playing(page: 1)
+    response = $tmdb.get "movie/now_playing", page: page
+    response.body
   end
 
-  def self.upcoming
-    response = $tmdb.get "movie/upcoming"
-    response.body["results"]
+  def self.upcoming(page: 1)
+    response = $tmdb.get "movie/upcoming", page: page
+    response.body
   end
 
   def self.find(id)

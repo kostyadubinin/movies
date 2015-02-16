@@ -34,6 +34,7 @@ gem 'autoprefixer-rails'
 gem 'bootswatch-rails'
 gem 'font-awesome-sass'
 
+gem 'kaminari'
 gem "faraday"
 gem "faraday_middleware"
 gem 'draper'

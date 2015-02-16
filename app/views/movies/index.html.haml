@@ -7,3 +7,6 @@
       = link_to movie_path(movie.id), class: 'thumbnail' do
         = image_tag movie.poster_url, alt: movie.title
     = responsive_columns_fix(i, xs: 2, sm: 3, md: 4, lg: 6)
+
+.row
+  .col-xs-12.text-center= paginate @movies
