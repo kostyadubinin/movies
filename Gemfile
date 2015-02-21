@@ -23,11 +23,6 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-# tests
-gem 'vcr'
-gem 'webmock'
-gem "codeclimate-test-reporter", group: :test, require: nil
-
 gem 'haml-rails'
 
 # auth
@@ -49,6 +44,12 @@ gem 'figaro'
 # tests
 group :development, :test do
   gem 'rspec-rails'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+  gem "codeclimate-test-reporter", group: :test, require: nil
 end
 
 # tools
