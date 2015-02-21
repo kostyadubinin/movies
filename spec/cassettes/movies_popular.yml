@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/popular?api_key=&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=14400
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 21 Feb 2015 20:28:31 GMT
+      Etag:
+      - '"83f60763776b5220e14d6dfa5788b3ff"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '8702'
+      X-Memc-Expires:
+      - '5698'
+      X-Memc-Key:
+      - e6a67ea0f577da24a9a41b1624ed4cf0
+      Content-Length:
+      - '2156'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/oYZtd7Md78HuzBvT5dlJlHWc89O.jpg","id":76757,"original_title":"Jupiter
+        Ascending","release_date":"2015-02-06","poster_path":"/9D1A46Tkf44r6REj1mXZhHtUQXt.jpg","popularity":37.6260647159461,"title":"Jupiter
+        Ascending","video":false,"vote_average":6.2,"vote_count":148},{"adult":false,"backdrop_path":"/fUn5I5f4069vwGFEEvA3HXt9xPP.jpg","id":131631,"original_title":"The
+        Hunger Games: Mockingjay - Part 1","release_date":"2014-11-21","poster_path":"/gj282Pniaa78ZJfbaixyLXnXEDI.jpg","popularity":32.4183461742486,"title":"The
+        Hunger Games: Mockingjay - Part 1","video":false,"vote_average":7.3,"vote_count":767},{"adult":false,"backdrop_path":"/2BXd0t9JdVqCp9sKf6kzMkr7QjB.jpg","id":177572,"original_title":"Big
+        Hero 6","release_date":"2014-11-07","poster_path":"/3zQvuSAUdC3mrx9vnSEpkFX0968.jpg","popularity":27.3656125127216,"title":"Big
+        Hero 6","video":false,"vote_average":8.1,"vote_count":626},{"adult":false,"backdrop_path":"/AsJVim0Hk3KbQPbfjyijfjqmaoZ.jpg","id":194662,"original_title":"Birdman","release_date":"2014-10-17","poster_path":"/rSZs93P0LLxqlVEbI001UKoeCQC.jpg","popularity":23.8628221472579,"title":"Birdman","video":false,"vote_average":7.9,"vote_count":437},{"adult":false,"backdrop_path":"/bt6DhdALyhf90gReozoQ0y3R3vZ.jpg","id":210577,"original_title":"Gone
+        Girl","release_date":"2014-10-03","poster_path":"/gdiLTof3rbPDAmPaCf4g6op46bj.jpg","popularity":18.3336033114109,"title":"Gone
+        Girl","video":false,"vote_average":8.1,"vote_count":1194},{"adult":false,"backdrop_path":"/8LraGVyVBrgzIfzxKV66oqOSGBU.jpg","id":244786,"original_title":"Whiplash","release_date":"2014-10-10","poster_path":"/lIv1QinFqz4dlp5U4lQ6HaiskOZ.jpg","popularity":18.2675811769998,"title":"Whiplash","video":false,"vote_average":8.6,"vote_count":361},{"adult":false,"backdrop_path":"/pKawqrtCBMmxarft7o1LbEynys7.jpg","id":228150,"original_title":"Fury","release_date":"2014-10-17","poster_path":"/il9XWx5CbNd2KdDUwrcClEZiLkv.jpg","popularity":18.0032723338578,"title":"Fury","video":false,"vote_average":7.5,"vote_count":674},{"adult":false,"backdrop_path":"/bHarw8xrmQeqf3t8HpuMY7zoK4x.jpg","id":118340,"original_title":"Guardians
+        of the Galaxy","release_date":"2014-08-01","poster_path":"/9gm3lL8JMTTmc3W4BmNMCuRLdL8.jpg","popularity":17.9483325749318,"title":"Guardians
+        of the Galaxy","video":false,"vote_average":8.3,"vote_count":2081},{"adult":false,"backdrop_path":"/dvPWHKQ20UjxSXakM0BlMmpxcab.jpg","id":227159,"original_title":"Horrible
+        Bosses 2","release_date":"2014-11-26","poster_path":"/zRkLCOx7o9tjPYb9s7u6mpw8VOs.jpg","popularity":17.4311100570419,"title":"Horrible
+        Bosses 2","video":false,"vote_average":6.5,"vote_count":209},{"adult":false,"backdrop_path":"/nnY2XnO3zjpkdq7xxOZPyI1r6V0.jpg","id":216015,"original_title":"Fifty
+        Shades of Grey","release_date":"2015-02-13","poster_path":"/aM4JLQEqoukWaxAE4X0s3IPT4Yz.jpg","popularity":16.7063858950882,"title":"Fifty
+        Shades of Grey","video":false,"vote_average":7.0,"vote_count":134},{"adult":false,"backdrop_path":"/umR9aXTxOxQUuDH2DamoJ5fIPB.jpg","id":122917,"original_title":"The
+        Hobbit: The Battle of the Five Armies","release_date":"2014-12-17","poster_path":"/vgAHvS0bT3fpcpnJqT6uDTUsHTo.jpg","popularity":16.5582740949665,"title":"The
+        Hobbit: The Battle of the Five Armies","video":false,"vote_average":7.5,"vote_count":886},{"adult":false,"backdrop_path":"/mFb0ygcue4ITixDkdr7wm1Tdarx.jpg","id":245891,"original_title":"John
+        Wick","release_date":"2014-10-24","poster_path":"/sq2MmFv9sanl9PFMfbdaBLveSJ8.jpg","popularity":15.5108985886724,"title":"John
+        Wick","video":false,"vote_average":7.2,"vote_count":478},{"adult":false,"backdrop_path":"/gktL2rfE7d1xrwPSSTohxLOjLSs.jpg","id":242582,"original_title":"Nightcrawler","release_date":"2014-10-31","poster_path":"/8oPY6ULFOTbAEskySNhgsUIN4fW.jpg","popularity":15.3610890858156,"title":"Nightcrawler","video":false,"vote_average":7.8,"vote_count":471},{"adult":false,"backdrop_path":"/pMNSiNT55XrxWPmoI5ytJyinRa8.jpg","id":100042,"original_title":"Dumb
+        and Dumber To","release_date":"2014-11-14","poster_path":"/gmfL0dPj66m09Fee2KPFiECUQlQ.jpg","popularity":15.2674966677131,"title":"Dumb
+        and Dumber To","video":false,"vote_average":6.1,"vote_count":236},{"adult":false,"backdrop_path":"/xu9zaAevzQ5nnrsXN6JcahLnG4i.jpg","id":157336,"original_title":"Interstellar","release_date":"2014-11-05","poster_path":"/m0UDkSPoVkmNfXFR9FN13yewy4B.jpg","popularity":13.9905872154184,"title":"Interstellar","video":false,"vote_average":8.7,"vote_count":1392},{"adult":false,"backdrop_path":"/eCgIoGvfNXrbSiQGqQHccuHjQHm.jpg","id":240832,"original_title":"Lucy","release_date":"2014-07-25","poster_path":"/4Y9PMR6hO2YWu2BrNhix4lHRA58.jpg","popularity":13.3750711129408,"title":"Lucy","video":false,"vote_average":6.4,"vote_count":1381},{"adult":false,"backdrop_path":"/6UPlIYKxZqUR6Xbpgu1JKG0J7UC.jpg","id":49017,"original_title":"Dracula
+        Untold","release_date":"2014-10-03","poster_path":"/4oy4e0DP6LRwRszfx8NY8EYBj8V.jpg","popularity":12.8435905521098,"title":"Dracula
+        Untold","video":false,"vote_average":6.5,"vote_count":544},{"adult":false,"backdrop_path":"/rKESeEePWWu4rATQDJOktllaDDv.jpg","id":156022,"original_title":"The
+        Equalizer","release_date":"2014-09-26","poster_path":"/2eQfjqlvPAxd9aLDs8DvsKLnfed.jpg","popularity":12.5993725008952,"title":"The
+        Equalizer","video":false,"vote_average":7.4,"vote_count":670},{"adult":false,"backdrop_path":"/hctIo3ugW79kzV6F9d6A1sMIAyP.jpg","id":205596,"original_title":"The
+        Imitation Game","release_date":"2014-11-14","poster_path":"/noUp0XOqIcmgefRnRZa1nhtRvWO.jpg","popularity":12.4848769015325,"title":"The
+        Imitation Game","video":false,"vote_average":8.3,"vote_count":531},{"adult":false,"backdrop_path":"/tSqrJxQ6UHQHdcbQokdCtAmv9Vx.jpg","id":260346,"original_title":"Taken
+        3","release_date":"2015-01-09","poster_path":"/lTbbt8otsYLKRDvELMRn83wdNoW.jpg","popularity":11.7518790180604,"title":"Taken
+        3","video":false,"vote_average":6.4,"vote_count":311}],"total_pages":10577,"total_results":211533}'
+    http_version:
+  recorded_at: Sat, 21 Feb 2015 20:28:31 GMT
+recorded_with: VCR 2.9.3
