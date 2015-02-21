@@ -23,6 +23,10 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+# tests
+gem 'vcr'
+gem 'webmock'
+
 gem 'haml-rails'
 
 # auth
