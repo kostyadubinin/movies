@@ -26,6 +26,7 @@ end
 # tests
 gem 'vcr'
 gem 'webmock'
+gem "codeclimate-test-reporter", group: :test, require: nil
 
 gem 'haml-rails'
 
