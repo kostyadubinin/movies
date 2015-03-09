@@ -1,12 +1,16 @@
 require "rails_helper"
 
 describe MoviesController do
-  describe "GET popular" do
-    it "assigns @movies" do
-      VCR.use_cassette("movies_popular", match_requests_on: [VCR.request_matchers.uri_without_param(:api_key)]) do
-        get :popular
-      end
+  describe "GET index" do
+    it "redirect to popular" do
+      get :index
+      expect(response).to redirect_to(movies_url(o: :popular))
+    end
 
+    it "assings @movies" do
+      VCR.use_cassette("movies_popular", match_requests_on: [VCR.request_matchers.uri_without_param(:api_key)]) do
+        get :index, o: :popular
+      end
       expect(assigns(:movies)).not_to be_empty
     end
   end
