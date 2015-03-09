@@ -24,9 +24,13 @@ class MoviesController < ApplicationController
 
     movies = MovieDecorator.decorate_collection(body["results"])
     @movies = Kaminari.
-      paginate_array(movies, total_count: 1000 * 20).
+      paginate_array(movies, total_count: total_count(body["total_results"])).
       page(params[:page]).per(20)
 
     render 'index'
+  end
+
+  def total_count(total_results)
+    total_results > 1000 * 20 ? 1000 * 20 : total_results
   end
 end
