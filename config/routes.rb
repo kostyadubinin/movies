@@ -2,15 +2,7 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  resources :movies, only: :show do
-    collection do
-      get 'popular'
-      get 'top_rated'
-      get 'upcoming'
-      get 'now_playing'
-    end
-  end
-
+  resources :movies, only: %w(index show)
   resources :people, only: %w(index show)
 
   # auth
@@ -18,7 +10,7 @@ Rails.application.routes.draw do
   delete 'sign_out', to: 'sessions#destroy', as: 'sign_out'
 
   # You can have the root of your site routed with "root"
-  root 'movies#popular'
+  root 'movies#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

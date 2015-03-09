@@ -1,31 +1,29 @@
 class Movie
-  def self.popular(page: 1)
-    response = $tmdb.get "movie/popular", page: page
-    response.body
+  def self.get(criteria)
+    $tmdb.get "movie/#{criteria[:type]}", criteria.except(:type)
   end
 
-  def self.top_rated(page: 1)
-    response = $tmdb.get "movie/top_rated", page: page
-    response.body
+  def self.popular
+    Criteria.new(self).type("popular")
   end
 
-  def self.now_playing(page: 1)
-    response = $tmdb.get "movie/now_playing", page: page
-    response.body
+  def self.top_rated
+    Criteria.new(self).type("top_rated")
   end
 
-  def self.upcoming(page: 1)
-    response = $tmdb.get "movie/upcoming", page: page
-    response.body
+  def self.now_playing
+    Criteria.new(self).type("now_playing")
+  end
+
+  def self.upcoming
+    Criteria.new(self).type("upcoming")
   end
 
   def self.find(id)
-    response = $tmdb.get "movie/#{id}", append_to_response: "trailers,credits"
-    response.body
+    Criteria.new(self).type(id).append_to_response("trailers,credits")
   end
 
-  def self.latest
-    response = $tmdb.get "movie/latest", append_to_response: "trailers,credits"
-    response.body
+  def self.page(page)
+    Criteria.new(self).page(page)
   end
 end

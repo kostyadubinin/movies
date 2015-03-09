@@ -1,32 +1,30 @@
 class MoviesController < ApplicationController
-  def popular
-    prepare_movies { Movie.popular(page: params.fetch(:page, 1)) }
-  end
+  def index
+    movies =
+      case params[:o]
+      when "popular"      then Movie.popular.page(params[:page])
+      when "top_rated"    then Movie.top_rated.page(params[:page])
+      when "now_playing"  then Movie.now_playing.page(params[:page])
+      when "upcoming"     then Movie.upcoming.page(params[:page])
+      end
 
-  def top_rated
-    prepare_movies { Movie.top_rated(page: params.fetch(:page, 1)) }
-  end
-
-  def now_playing
-    prepare_movies { Movie.now_playing(page: params.fetch(:page, 1)) }
-  end
-
-  def upcoming
-    prepare_movies { Movie.upcoming(page: params.fetch(:page, 1)) }
+    movies ||= Movie.popular.page(params[:page])
+    prepare_movies { movies }
   end
 
   def show
-    @movie = MovieDecorator.decorate(Movie.find(params[:id]))
+    response = Movie.find(params[:id]).response
+    @movie = MovieDecorator.decorate(response.body)
   end
 
   private
 
   def prepare_movies
-    body = yield
+    body = yield.response.body
 
     movies = MovieDecorator.decorate_collection(body["results"])
     @movies = Kaminari.
-      paginate_array(movies, total_count: body["total_results"]).
+      paginate_array(movies, total_count: 1000 * 20).
       page(params[:page]).per(20)
 
     render 'index'
