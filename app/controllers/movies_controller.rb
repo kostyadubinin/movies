@@ -6,9 +6,10 @@ class MoviesController < ApplicationController
       when "top_rated"    then Movie.top_rated.page(params[:page])
       when "now_playing"  then Movie.now_playing.page(params[:page])
       when "upcoming"     then Movie.upcoming.page(params[:page])
+      else
+        redirect_to movies_path(o: :popular) and return
       end
 
-    movies ||= Movie.popular.page(params[:page])
     prepare_movies { movies }
   end
 
