@@ -1,29 +1,23 @@
 class Movie
-  def self.get(criteria)
-    $tmdb.get "movie/#{criteria[:type]}", criteria.except(:type)
-  end
+  attr_reader :body
 
-  def self.popular
-    Criteria.new(self).type("popular")
-  end
-
-  def self.top_rated
-    Criteria.new(self).type("top_rated")
-  end
-
-  def self.now_playing
-    Criteria.new(self).type("now_playing")
-  end
-
-  def self.upcoming
-    Criteria.new(self).type("upcoming")
+  def popular
   end
 
   def self.find(id)
-    Criteria.new(self).type(id).append_to_response("trailers,credits")
+    response = $tmdb.get "movie/#{id}"
+    new(response.body)
   end
 
-  def self.page(page)
-    Criteria.new(self).page(page)
+  def initialize(body)
+    @body = body
+  end
+
+  def title
+    body["title"]
+  end
+
+  def genres
+    body["genres"].map { |g| Genre.new(g) }
   end
 end
