@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/movie/popular?api_key=<TMDB_API_KEY>
+    uri: https://api.themoviedb.org/3/movie/popular?api_key=TMDB_API_KEY
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 18 Mar 2015 21:08:55 GMT
+      - Wed, 18 Mar 2015 21:53:09 GMT
       Etag:
       - '"df18f0b7366118b8f8e66d7d4c11b556"'
       Server:
@@ -37,9 +37,9 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '2562'
+      - '5216'
       X-Memc-Expires:
-      - '11838'
+      - '9184'
       X-Memc-Key:
       - e6a67ea0f577da24a9a41b1624ed4cf0
       Content-Length:
@@ -78,5 +78,5 @@ http_interactions:
         Bosses 2","release_date":"2014-11-26","poster_path":"/zRkLCOx7o9tjPYb9s7u6mpw8VOs.jpg","popularity":9.27148988839064,"title":"Horrible
         Bosses 2","video":false,"vote_average":6.4,"vote_count":274}],"total_pages":10783,"total_results":215646}'
     http_version: 
-  recorded_at: Wed, 18 Mar 2015 21:08:55 GMT
+  recorded_at: Wed, 18 Mar 2015 21:53:09 GMT
 recorded_with: VCR 2.9.3
