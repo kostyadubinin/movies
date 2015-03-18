@@ -8,7 +8,7 @@ describe MoviesController do
     end
 
     it "assings @movies" do
-      VCR.use_cassette("movies_popular", match_requests_on: [VCR.request_matchers.uri_without_param(:api_key)]) do
+      VCR.use_cassette("movies_popular") do
         get :index, o: :popular
       end
       expect(assigns(:movies)).not_to be_empty
