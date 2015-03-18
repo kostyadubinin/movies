@@ -7,10 +7,8 @@ describe MoviesController do
       expect(response).to redirect_to(movies_url(o: :popular))
     end
 
-    it "assings @movies" do
-      VCR.use_cassette("movies_popular") do
-        get :index, o: :popular
-      end
+    it "assings @movies", :vcr do
+      get :index, o: :popular
       expect(assigns(:movies)).not_to be_empty
     end
   end
