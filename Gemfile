@@ -44,6 +44,10 @@ gem 'figaro'
 # tests
 group :development, :test do
   gem 'rspec-rails'
+
+  # tools
+  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
+  gem 'pry-byebug'
 end
 
 group :test do
@@ -55,6 +59,4 @@ end
 # tools
 group :development do
   gem 'quiet_assets'
-  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
-  gem 'pry-byebug'
 end
