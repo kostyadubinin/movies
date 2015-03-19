@@ -13,6 +13,20 @@ class Movie
     @body = body
   end
 
+  def adult
+    body["adult"]
+  end
+
+  def backdrop_path
+    body["backdrop_path"]
+  end
+
+  def belongs_to_collection
+    if body["belongs_to_collection"].present?
+      Collection.new(body["belongs_to_collection"])
+    end
+  end
+
   def title
     body["title"]
   end
