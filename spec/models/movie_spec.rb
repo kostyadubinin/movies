@@ -50,6 +50,26 @@ describe Movie, :vcr do
     expect(movie.id).to eq(550)
   end
 
+  it "has an IMDb id" do
+    movie_attributes["imdb_id"] = 777
+    expect(movie.imdb_id).to eq(777)
+  end
+
+  it "has original language" do
+    movie_attributes["original_language"] = "eu"
+    expect(movie.original_language).to eq("eu")
+  end
+
+  it "has an original_title" do
+    movie_attributes["original_title"] = "Dracula"
+    expect(movie.original_title).to eq("Dracula")
+  end
+
+  it "has an overview" do
+    movie_attributes["overview"] = "Dracula"
+    expect(movie.overview).to eq("Dracula")
+  end
+
   it "has a title" do
     movie_attributes["title"] = "Dracula"
     expect(movie.title).to eq("Dracula")

@@ -44,6 +44,22 @@ class Movie
     body["id"]
   end
 
+  def imdb_id
+    body["imdb_id"]
+  end
+
+  def original_language
+    body["original_language"]
+  end
+
+  def original_title
+    body["original_title"]
+  end
+
+  def overview
+    body["overview"]
+  end
+
   def title
     body["title"]
   end
