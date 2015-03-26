@@ -27,11 +27,24 @@ class Movie
     end
   end
 
-  def title
-    body["title"]
+  def budget
+    return nil if body["budget"] == 0
+    body["budget"]
   end
 
   def genres
     body["genres"].map { |g| Genre.new(g) }
+  end
+
+  def homepage
+    body["homepage"]
+  end
+
+  def id
+    body["id"]
+  end
+
+  def title
+    body["title"]
   end
 end

@@ -15,30 +15,43 @@ describe Movie, :vcr do
   end
 
   describe "#belongs_to_collection" do
-    it "returns nil if the movie doesn't belong to a collection" do
-      movie_attributes["belongs_to_collection"] = nil
-      expect(movie.belongs_to_collection).to be_nil
-    end
-
-    it "returns collection object if the movie belongs to a collection" do
-      movie_attributes["belongs_to_collection"] = {
-        "id"            => 121938,
+    let(:collection_attrs) {
+      { "id"            => 121938,
         "name"          => "The Hobbit Collection",
         "poster_path"   => "/hQghXOjSS2xfzx9XnMyZqt8brCF.jpg",
-        "backdrop_path" => "/7wO7MSnP5UcwR2cTHdJFF1vP4Ie.jpg"
-      }
+        "backdrop_path" => "/7wO7MSnP5UcwR2cTHdJFF1vP4Ie.jpg" }
+    }
 
+    it "returns collection object if the movie belongs to a collection" do
+      movie_attributes["belongs_to_collection"] = collection_attrs
       expect(movie.belongs_to_collection).to be_an_instance_of(Collection)
     end
   end
 
-  it "has a title" do
-    movie_attributes["title"] = "Dracula"
-    expect(movie.title).to eq("Dracula")
+  describe "#budget" do
+    it "returns nil instead of 0" do
+      movie_attributes["budget"] = 0
+      expect(movie.budget).to be_nil
+    end
   end
 
   it "has genres" do
     movie_attributes["genres"] = [{ "id" => 7, "name" => "Western" }]
     expect(movie.genres).to all(be_an_instance_of(Genre))
+  end
+
+  it "has a homepage" do
+    movie_attributes["homepage"] = "http://www.thehobbit.com/"
+    expect(movie.homepage).to eq("http://www.thehobbit.com/")
+  end
+
+  it "has an id" do
+    movie_attributes["id"] = 550
+    expect(movie.id).to eq(550)
+  end
+
+  it "has a title" do
+    movie_attributes["title"] = "Dracula"
+    expect(movie.title).to eq("Dracula")
   end
 end
