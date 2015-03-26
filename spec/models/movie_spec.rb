@@ -22,7 +22,7 @@ describe Movie, :vcr do
         "backdrop_path" => "/7wO7MSnP5UcwR2cTHdJFF1vP4Ie.jpg" }
     }
 
-    it "returns collection object if the movie belongs to a collection" do
+    it "returns collection object" do
       movie_attributes["belongs_to_collection"] = collection_attrs
       expect(movie.belongs_to_collection).to be_an_instance_of(Collection)
     end
