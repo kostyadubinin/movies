@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 26 Mar 2015 22:12:52 GMT
+      - Thu, 26 Mar 2015 22:26:08 GMT
       Etag:
       - '"bffb87d136633bd3f70bba87461ede2c"'
       Server:
@@ -37,9 +37,9 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '12997'
+      - '13793'
       X-Memc-Expires:
-      - '8603'
+      - '7807'
       X-Memc-Key:
       - f5d8d6d123f674ea3be4bd53fba9acb2
       Content-Length:
@@ -60,5 +60,5 @@ http_interactions:
         much can you know about yourself if you''ve never been in a fight?","title":"Fight
         Club","video":false,"vote_average":7.8,"vote_count":3353}'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 22:12:52 GMT
+  recorded_at: Thu, 26 Mar 2015 22:26:09 GMT
 recorded_with: VCR 2.9.3
