@@ -70,9 +70,84 @@ describe Movie, :vcr do
     expect(movie.overview).to eq("Dracula")
   end
 
+  describe "#popularity" do
+    it "returns popularity of the movie" do
+      movie_attributes["popularity"] = 2.50307202280779
+      expect(movie.popularity).to eq(2.50307202280779)
+    end
+
+    it "returns nil instead of 0.0" do
+      movie_attributes["popularity"] = 0.0
+      expect(movie.popularity).to eq(nil)
+    end
+  end
+
+  it "has a poster path" do
+    movie_attributes["poster_path"] = "/poster.png"
+    expect(movie.poster_path).to eq("/poster.png")
+  end
+
+  describe "production_companies" do
+    it "returns an array of ProductionCompany objects" do
+      movie_attributes["production_companies"] = [
+        { "name" => "20th Century Fox",  "id" => 25 },
+        { "name" => "Fox 2000 Pictures", "id" => 711 }
+      ]
+
+      expect(movie.production_companies).to all(
+        be_an_instance_of(ProductionCompany)
+      )
+    end
+  end
+
+  describe "production_countries" do
+    it "returns an array of ProductionCountry objects" do
+      movie_attributes["production_countries"] = [
+        {"iso_3166_1" => "DE", "name" => "Germany"},
+        {"iso_3166_1" => "US", "name" => "United States of America"}
+      ]
+
+      expect(movie.production_countries).to all(
+        be_an_instance_of(ProductionCountry)
+      )
+    end
+  end
+
+  it "has a status" do
+    movie_attributes["status"] = "Released"
+    expect(movie.status).to eq("Released")
+  end
+
+  it "has a tagline" do
+    movie_attributes["tagline"] = "Fire burns brighter in the darkness."
+    expect(movie.tagline).to eq("Fire burns brighter in the darkness.")
+  end
+
   it "has a title" do
     movie_attributes["title"] = "Dracula"
     expect(movie.title).to eq("Dracula")
+  end
+
+  it "has a video flag" do
+    movie_attributes["video"] = true
+    expect(movie.video).to be_truthy
+  end
+
+  describe "#vote_average" do
+    it "returns vote average for the movie" do
+      movie_attributes["vote_average"] = 7.7
+      expect(movie.vote_average).to eq(7.7)
+    end
+
+    it "returns nil instead of 0.0" do
+      movie_attributes["vote_average"] = 0.0
+      expect(movie.vote_average).to eq(nil)
+    end
+  end
+
+  it "has a vote count" do
+    movie_attributes["vote_count"] = 3185
+    expect(movie.vote_count).to eq(3185)
   end
 
   describe ".latest" do

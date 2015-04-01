@@ -64,11 +64,45 @@ class Movie
     body["overview"]
   end
 
+  def popularity
+    return nil if body["popularity"] == 0
+    body["popularity"]
+  end
+
+  def poster_path
+    body["poster_path"]
+  end
+
+  def production_companies
+    body["production_companies"].map { |pc| ProductionCompany.new(pc) }
+  end
+
+  def production_countries
+    body["production_countries"].map { |pc| ProductionCountry.new(pc) }
+  end
+
+  def status
+    body["status"]
+  end
+
+  def tagline
+    body["tagline"]
+  end
+
   def title
     body["title"]
   end
 
-  def popularity
-    body["popularity"]
+  def video
+    body["video"]
+  end
+
+  def vote_average
+    return nil if body["vote_average"] == 0.0
+    body["vote_average"]
+  end
+
+  def vote_count
+    body["vote_count"]
   end
 end
