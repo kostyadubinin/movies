@@ -1,6 +1,11 @@
 class Movie
   attr_reader :body
 
+  def self.latest
+    response = $tmdb.get "movie/latest"
+    new(response.body)
+  end
+
   def self.find(id)
     response = $tmdb.get "movie/#{id}"
     new(response.body)

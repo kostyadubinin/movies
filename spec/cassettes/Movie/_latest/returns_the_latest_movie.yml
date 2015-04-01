@@ -1,0 +1,137 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/latest?api_key=TMDB_API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=0
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 01 Apr 2015 19:48:54 GMT
+      Etag:
+      - '"55af286a135296187d3f7af20c3e0dd7"'
+      Last-Modified:
+      - 2015-04-01 19:38:51 UTC
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Memc:
+      - MISS
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '0'
+      X-Memc-Key:
+      - 7d7c5a5093dfb9d7fcd7412f9fd461eb
+      Content-Length:
+      - '715'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsImJlbG9uZ3Nf
+        dG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOlt7Imlk
+        IjozNSwibmFtZSI6IkNvbWVkeSJ9LHsiaWQiOjM2LCJuYW1lIjoiSGlzdG9y
+        eSJ9LHsiaWQiOjEwNDAyLCJuYW1lIjoiTXVzaWMifV0sImhvbWVwYWdlIjpu
+        dWxsLCJpZCI6MzMzODM0LCJpbWRiX2lkIjoiIiwib3JpZ2luYWxfbGFuZ3Vh
+        Z2UiOiJmciIsIm9yaWdpbmFsX3RpdGxlIjoiTGEgdHVxdWUgZW4gbW91c3Nl
+        IGRlIG5vbWJyaWwiLCJvdmVydmlldyI6bnVsbCwicG9wdWxhcml0eSI6MC4w
+        LCJwb3N0ZXJfcGF0aCI6bnVsbCwicHJvZHVjdGlvbl9jb21wYW5pZXMiOlt7
+        Im5hbWUiOiJPcmNoZXN0cmUgc3ltcGhvbmlxdWUgZGUgTW9udHLDqWFsIiwi
+        aWQiOjUwMTEzfV0sInByb2R1Y3Rpb25fY291bnRyaWVzIjpbeyJpc29fMzE2
+        Nl8xIjoiQ0EiLCJuYW1lIjoiQ2FuYWRhIn1dLCJyZWxlYXNlX2RhdGUiOiIy
+        MDExLTEyLTIyIiwicmV2ZW51ZSI6MCwicnVudGltZSI6bnVsbCwic3Bva2Vu
+        X2xhbmd1YWdlcyI6W3siaXNvXzYzOV8xIjoiZnIiLCJuYW1lIjoiRnJhbsOn
+        YWlzIn1dLCJzdGF0dXMiOiJSZWxlYXNlZCIsInRhZ2xpbmUiOm51bGwsInRp
+        dGxlIjoiTGEgdHVxdWUgZW4gbW91c3NlIGRlIG5vbWJyaWwiLCJ2aWRlbyI6
+        ZmFsc2UsInZvdGVfYXZlcmFnZSI6MC4wLCJ2b3RlX2NvdW50IjowfQ==
+    http_version: 
+  recorded_at: Wed, 01 Apr 2015 19:48:55 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/latest?api_key=TMDB_API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=0
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 01 Apr 2015 19:48:55 GMT
+      Etag:
+      - '"55af286a135296187d3f7af20c3e0dd7"'
+      Last-Modified:
+      - 2015-04-01 19:38:51 UTC
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Memc:
+      - MISS
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '0'
+      X-Memc-Key:
+      - 7d7c5a5093dfb9d7fcd7412f9fd461eb
+      Content-Length:
+      - '715'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsImJlbG9uZ3Nf
+        dG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOlt7Imlk
+        IjozNSwibmFtZSI6IkNvbWVkeSJ9LHsiaWQiOjM2LCJuYW1lIjoiSGlzdG9y
+        eSJ9LHsiaWQiOjEwNDAyLCJuYW1lIjoiTXVzaWMifV0sImhvbWVwYWdlIjpu
+        dWxsLCJpZCI6MzMzODM0LCJpbWRiX2lkIjoiIiwib3JpZ2luYWxfbGFuZ3Vh
+        Z2UiOiJmciIsIm9yaWdpbmFsX3RpdGxlIjoiTGEgdHVxdWUgZW4gbW91c3Nl
+        IGRlIG5vbWJyaWwiLCJvdmVydmlldyI6bnVsbCwicG9wdWxhcml0eSI6MC4w
+        LCJwb3N0ZXJfcGF0aCI6bnVsbCwicHJvZHVjdGlvbl9jb21wYW5pZXMiOlt7
+        Im5hbWUiOiJPcmNoZXN0cmUgc3ltcGhvbmlxdWUgZGUgTW9udHLDqWFsIiwi
+        aWQiOjUwMTEzfV0sInByb2R1Y3Rpb25fY291bnRyaWVzIjpbeyJpc29fMzE2
+        Nl8xIjoiQ0EiLCJuYW1lIjoiQ2FuYWRhIn1dLCJyZWxlYXNlX2RhdGUiOiIy
+        MDExLTEyLTIyIiwicmV2ZW51ZSI6MCwicnVudGltZSI6bnVsbCwic3Bva2Vu
+        X2xhbmd1YWdlcyI6W3siaXNvXzYzOV8xIjoiZnIiLCJuYW1lIjoiRnJhbsOn
+        YWlzIn1dLCJzdGF0dXMiOiJSZWxlYXNlZCIsInRhZ2xpbmUiOm51bGwsInRp
+        dGxlIjoiTGEgdHVxdWUgZW4gbW91c3NlIGRlIG5vbWJyaWwiLCJ2aWRlbyI6
+        ZmFsc2UsInZvdGVfYXZlcmFnZSI6MC4wLCJ2b3RlX2NvdW50IjowfQ==
+    http_version: 
+  recorded_at: Wed, 01 Apr 2015 19:48:55 GMT
+recorded_with: VCR 2.9.3

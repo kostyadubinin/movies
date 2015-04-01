@@ -74,4 +74,17 @@ describe Movie, :vcr do
     movie_attributes["title"] = "Dracula"
     expect(movie.title).to eq("Dracula")
   end
+
+  describe ".latest" do
+    let(:latest_movie_attributes) { $tmdb.get("movie/latest").body }
+    subject(:latest_movie) { Movie.latest }
+
+    it "returns a Movie object" do
+      expect(latest_movie).to be_an_instance_of(Movie)
+    end
+
+    it "returns the latest movie" do
+      expect(latest_movie.id).to eq(latest_movie_attributes["id"])
+    end
+  end
 end
