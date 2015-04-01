@@ -1,9 +1,6 @@
 class Movie
   attr_reader :body
 
-  def popular
-  end
-
   def self.find(id)
     response = $tmdb.get "movie/#{id}"
     new(response.body)
@@ -64,5 +61,9 @@ class Movie
 
   def title
     body["title"]
+  end
+
+  def popularity
+    body["popularity"]
   end
 end
