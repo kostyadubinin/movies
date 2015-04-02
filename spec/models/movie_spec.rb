@@ -6,7 +6,7 @@ describe Movie, :vcr do
 
   it "has adult flag" do
     movie_attributes["adult"] = true
-    expect(movie.adult).to be_truthy
+    expect(movie.adult?).to be_truthy
   end
 
   it "has a backdrop path" do
@@ -24,7 +24,7 @@ describe Movie, :vcr do
 
     it "returns collection object" do
       movie_attributes["belongs_to_collection"] = collection_attrs
-      expect(movie.belongs_to_collection).to be_an_instance_of(Collection)
+      expect(movie.collection).to be_an_instance_of(Collection)
     end
   end
 
@@ -130,7 +130,7 @@ describe Movie, :vcr do
 
   it "has a video flag" do
     movie_attributes["video"] = true
-    expect(movie.video).to be_truthy
+    expect(movie.video?).to be_truthy
   end
 
   describe "#vote_average" do
