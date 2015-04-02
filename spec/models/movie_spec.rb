@@ -163,4 +163,72 @@ describe Movie, :vcr do
       expect(latest_movie.id).to eq(latest_movie_attributes["id"])
     end
   end
+
+  describe ".popular" do
+    let(:popular_movies_attrs) {
+      response = $tmdb.get("movie/popular")
+      response.body["results"]
+    }
+
+    subject(:movies) { Movie.popular }
+
+    it "returns an array of Movie objects" do
+      expect(movies).to all(be_an_instance_of(Movie))
+    end
+
+    it "returns popular movies" do
+      expect(movies.map(&:id)).to eq(popular_movies_attrs.map{ |m| m["id"] })
+    end
+  end
+
+  describe ".upcoming" do
+    let(:upcoming_movies_attrs) {
+      response = $tmdb.get("movie/upcoming")
+      response.body["results"]
+    }
+
+    subject(:movies) { Movie.upcoming }
+
+    it "returns an array of Movie objects" do
+      expect(movies).to all(be_an_instance_of(Movie))
+    end
+
+    it "returns upcoming movies" do
+      expect(movies.map(&:id)).to eq(upcoming_movies_attrs.map{ |m| m["id"] })
+    end
+  end
+
+  describe ".now_playing" do
+    let(:now_playing_movies_attrs) {
+      response = $tmdb.get("movie/now_playing")
+      response.body["results"]
+    }
+
+    subject(:movies) { Movie.now_playing }
+
+    it "returns an array of Movie objects" do
+      expect(movies).to all(be_an_instance_of(Movie))
+    end
+
+    it "returns now playing movies" do
+      expect(movies.map(&:id)).to eq(now_playing_movies_attrs.map{ |m| m["id"] })
+    end
+  end
+
+  describe ".top_rated" do
+    let(:top_rated_movies_attrs) {
+      response = $tmdb.get("movie/top_rated")
+      response.body["results"]
+    }
+
+    subject(:movies) { Movie.top_rated }
+
+    it "returns an array of Movie objects" do
+      expect(movies).to all(be_an_instance_of(Movie))
+    end
+
+    it "returns now playing movies" do
+      expect(movies.map(&:id)).to eq(top_rated_movies_attrs.map{ |m| m["id"] })
+    end
+  end
 end
