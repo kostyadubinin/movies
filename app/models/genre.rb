@@ -1,11 +1,15 @@
 class Genre
-  attr_reader :body
+  attr_reader :attributes
 
-  def initialize(body)
-    @body = body
+  def initialize(attributes)
+    @attributes = attributes
   end
 
   def id
-    body["id"]
+    attributes["id"]
+  end
+
+  def name
+    attributes["name"]
   end
 end
