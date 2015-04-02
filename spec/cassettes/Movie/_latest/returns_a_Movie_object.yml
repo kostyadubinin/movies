@@ -25,11 +25,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 01 Apr 2015 19:48:54 GMT
+      - Thu, 02 Apr 2015 19:00:31 GMT
       Etag:
-      - '"55af286a135296187d3f7af20c3e0dd7"'
+      - '"f4af583f0a6d5e1e4e609f97ee569289"'
       Last-Modified:
-      - 2015-04-01 19:38:51 UTC
+      - 2015-04-02 18:57:03 UTC
       Server:
       - nginx
       Status:
@@ -43,28 +43,14 @@ http_interactions:
       X-Memc-Key:
       - 7d7c5a5093dfb9d7fcd7412f9fd461eb
       Content-Length:
-      - '715'
+      - '546'
       Connection:
       - keep-alive
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsImJlbG9uZ3Nf
-        dG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOlt7Imlk
-        IjozNSwibmFtZSI6IkNvbWVkeSJ9LHsiaWQiOjM2LCJuYW1lIjoiSGlzdG9y
-        eSJ9LHsiaWQiOjEwNDAyLCJuYW1lIjoiTXVzaWMifV0sImhvbWVwYWdlIjpu
-        dWxsLCJpZCI6MzMzODM0LCJpbWRiX2lkIjoiIiwib3JpZ2luYWxfbGFuZ3Vh
-        Z2UiOiJmciIsIm9yaWdpbmFsX3RpdGxlIjoiTGEgdHVxdWUgZW4gbW91c3Nl
-        IGRlIG5vbWJyaWwiLCJvdmVydmlldyI6bnVsbCwicG9wdWxhcml0eSI6MC4w
-        LCJwb3N0ZXJfcGF0aCI6bnVsbCwicHJvZHVjdGlvbl9jb21wYW5pZXMiOlt7
-        Im5hbWUiOiJPcmNoZXN0cmUgc3ltcGhvbmlxdWUgZGUgTW9udHLDqWFsIiwi
-        aWQiOjUwMTEzfV0sInByb2R1Y3Rpb25fY291bnRyaWVzIjpbeyJpc29fMzE2
-        Nl8xIjoiQ0EiLCJuYW1lIjoiQ2FuYWRhIn1dLCJyZWxlYXNlX2RhdGUiOiIy
-        MDExLTEyLTIyIiwicmV2ZW51ZSI6MCwicnVudGltZSI6bnVsbCwic3Bva2Vu
-        X2xhbmd1YWdlcyI6W3siaXNvXzYzOV8xIjoiZnIiLCJuYW1lIjoiRnJhbsOn
-        YWlzIn1dLCJzdGF0dXMiOiJSZWxlYXNlZCIsInRhZ2xpbmUiOm51bGwsInRp
-        dGxlIjoiTGEgdHVxdWUgZW4gbW91c3NlIGRlIG5vbWJyaWwiLCJ2aWRlbyI6
-        ZmFsc2UsInZvdGVfYXZlcmFnZSI6MC4wLCJ2b3RlX2NvdW50IjowfQ==
+      encoding: UTF-8
+      string: '{"adult":false,"backdrop_path":null,"belongs_to_collection":null,"budget":0,"genres":[],"homepage":null,"id":334025,"imdb_id":"tt0276585","original_language":"en","original_title":"Captured
+        on Film: The True Story of Marion Davies","overview":null,"popularity":0.0,"poster_path":null,"production_companies":[],"production_countries":[],"release_date":"","revenue":0,"runtime":null,"spoken_languages":[],"status":"Released","tagline":null,"title":"Captured
+        on Film: The True Story of Marion Davies","video":false,"vote_average":0.0,"vote_count":0}'
     http_version: 
-  recorded_at: Wed, 01 Apr 2015 19:48:54 GMT
+  recorded_at: Thu, 02 Apr 2015 19:00:32 GMT
 recorded_with: VCR 2.9.3

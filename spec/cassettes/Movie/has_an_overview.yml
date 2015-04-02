@@ -25,9 +25,9 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 26 Mar 2015 22:26:09 GMT
+      - Thu, 02 Apr 2015 19:00:23 GMT
       Etag:
-      - '"bffb87d136633bd3f70bba87461ede2c"'
+      - '"e7094a82b5f803cc011929816a6f0253"'
       Server:
       - nginx
       Status:
@@ -37,13 +37,13 @@ http_interactions:
       X-Memc:
       - HIT
       X-Memc-Age:
-      - '13794'
+      - '1247'
       X-Memc-Expires:
-      - '7806'
+      - '20353'
       X-Memc-Key:
       - f5d8d6d123f674ea3be4bd53fba9acb2
       Content-Length:
-      - '749'
+      - '751'
       Connection:
       - keep-alive
     body:
@@ -53,12 +53,12 @@ http_interactions:
         channel primal male aggression into a shocking new form of therapy. Their
         concept catches on, with underground \"fight clubs\" forming in every town,
         until an eccentric gets in the way and ignites an out-of-control spiral toward
-        oblivion.","popularity":2.55895787928544,"poster_path":"/2lECpi35Hnbpa4y46JX0aY3AWTy.jpg","production_companies":[{"name":"20th
+        oblivion.","popularity":3.132194299941,"poster_path":"/2lECpi35Hnbpa4y46JX0aY3AWTy.jpg","production_companies":[{"name":"20th
         Century Fox","id":25},{"name":"Fox 2000 Pictures","id":711},{"name":"Regency
         Enterprises","id":508}],"production_countries":[{"iso_3166_1":"DE","name":"Germany"},{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1999-10-14","revenue":100853753,"runtime":139,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"How
         much can you know about yourself if you''ve never been in a fight?","title":"Fight
-        Club","video":false,"vote_average":7.8,"vote_count":3353}'
+        Club","video":false,"vote_average":7.8,"vote_count":3370}'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 22:26:09 GMT
+  recorded_at: Thu, 02 Apr 2015 19:00:23 GMT
 recorded_with: VCR 2.9.3
