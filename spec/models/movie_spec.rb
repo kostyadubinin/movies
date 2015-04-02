@@ -1,10 +1,11 @@
 require "rails_helper"
 
+# TODO: replace all `it`s with descrite
 describe Movie, :vcr do
   let(:movie_attributes) { $tmdb.get("movie/550").body }
   subject(:movie) { Movie.new(movie_attributes) }
 
-  it "has adult flag" do
+  it "has an adult flag" do
     movie_attributes["adult"] = true
     expect(movie.adult?).to be_truthy
   end
@@ -14,7 +15,7 @@ describe Movie, :vcr do
     expect(movie.backdrop_path).to eq("/backdrop.png")
   end
 
-  describe "#belongs_to_collection" do
+  describe "#collection" do
     let(:collection_attrs) {
       { "id"            => 121938,
         "name"          => "The Hobbit Collection",
@@ -45,12 +46,12 @@ describe Movie, :vcr do
     expect(movie.homepage).to eq("http://www.thehobbit.com/")
   end
 
-  it "has an ID" do
+  it "has an id" do
     movie_attributes["id"] = 550
     expect(movie.id).to eq(550)
   end
 
-  it "has an IMDb ID" do
+  it "has an IMDb id" do
     movie_attributes["imdb_id"] = 777
     expect(movie.imdb_id).to eq(777)
   end

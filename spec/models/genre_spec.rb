@@ -15,7 +15,7 @@ describe Genre do
     expect(genre.id).to eq(14)
   end
 
-  it "has an name" do
+  it "has a name" do
     genre_attributes["name"] = "Fantasy"
     expect(genre.name).to eq("Fantasy")
   end

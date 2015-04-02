@@ -15,7 +15,7 @@ describe ProductionCompany do
     expect(company.id).to eq(12)
   end
 
-  it "has an name" do
+  it "has a name" do
     attributes["name"] = "New Line Cinema"
     expect(company.name).to eq("New Line Cinema")
   end
