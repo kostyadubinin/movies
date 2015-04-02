@@ -15,8 +15,7 @@ class Movie
     @body = body
   end
 
-  # TODO: Consider add a trailing ?
-  def adult
+  def adult?
     body["adult"]
   end
 
@@ -24,8 +23,7 @@ class Movie
     body["backdrop_path"]
   end
 
-  # TODO: Consider renaming to just collection
-  def belongs_to_collection
+  def collection
     if body["belongs_to_collection"].present?
       Collection.new(body["belongs_to_collection"])
     end
@@ -93,7 +91,7 @@ class Movie
     body["title"]
   end
 
-  def video
+  def video?
     body["video"]
   end
 
