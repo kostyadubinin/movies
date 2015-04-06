@@ -1,5 +1,5 @@
 .row
-  .col-sm-12
-    %ul
-      - @movies.each do |movie|
-        %li= movie.title
+  - @movies.each do |movie|
+    .col-sm-2
+      %a.thumbnail
+        = image_tag movie.poster_url, alt: movie.title

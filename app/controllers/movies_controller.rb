@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.popular
+    @movies = MovieDecorator.decorate_collection(Movie.popular)
   end
 
   def show
