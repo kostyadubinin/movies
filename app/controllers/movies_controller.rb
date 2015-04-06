@@ -1,16 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    movies =
-      case params[:o]
-      when "popular"      then Movie.popular.page(params[:page])
-      when "top_rated"    then Movie.top_rated.page(params[:page])
-      when "now_playing"  then Movie.now_playing.page(params[:page])
-      when "upcoming"     then Movie.upcoming.page(params[:page])
-      else
-        redirect_to movies_path(o: :popular) and return
-      end
-
-    prepare_movies { movies }
+    @movies = Movie.popular
   end
 
   def show
