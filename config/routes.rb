@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  resources :movies, only: %w(index show)
+  # movies
+  get ":order", to: "movies#index", order: /top_rated|upcoming|now_playing/, as: :ordered_movies
+  resources :movies, path: "/", only: %w(index)
+
   resources :people, only: %w(index show)
 
   # auth

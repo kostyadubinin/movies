@@ -1,6 +1,13 @@
 class MoviesController < ApplicationController
   def index
-    @movies = MovieDecorator.decorate_collection(Movie.popular)
+    @movies = MovieDecorator.decorate_collection(
+      case params[:order]
+      when "top_rated"   then Movie.top_rated
+      when "upcoming"    then Movie.upcoming
+      when "now_playing" then Movie.now_playing
+      else Movie.popular
+      end
+    )
   end
 
   def show
