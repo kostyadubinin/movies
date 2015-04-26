@@ -1,6 +1,10 @@
 class Collection
   pattr_initialize :attributes
 
+  def to_h
+    attributes
+  end
+
   def name
     attributes["name"]
   end

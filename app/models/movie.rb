@@ -31,6 +31,10 @@ class Movie
     new(response.body)
   end
 
+  def to_h
+    attributes
+  end
+
   def adult?
     attributes["adult"]
   end
