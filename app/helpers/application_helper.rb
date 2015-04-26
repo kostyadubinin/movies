@@ -20,10 +20,6 @@ module ApplicationHelper
     content_tag(:div, nil, class: "clearfix #{tiers.join(' ')}") if tiers.any?
   end
 
-  def youtube_url(source)
-    "//www.youtube.com/embed/#{source}"
-  end
-
   def flash_class(level)
     case level
     when "success" then "alert alert-success"
