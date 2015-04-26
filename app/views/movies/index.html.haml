@@ -2,7 +2,8 @@
   .col-sm-12
     = render "order_nav"
 .row
-  - @movies.each do |movie|
+  - @movies.to_enum.with_index(1) do |movie, i|
     .col-sm-2
       %a.thumbnail
         = image_tag movie.poster_url, alt: movie.title
+    = responsive_columns_fix(i, sm: 6, md: 6, lg: 6)
