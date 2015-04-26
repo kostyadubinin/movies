@@ -6,10 +6,24 @@ class MovieDecorator < Draper::Decorator
   BASE_URL = "http://image.tmdb.org/t/p/"
 
   def poster_url
-    "#{BASE_URL}w#{POSTER_SIZE}#{object.poster_path}"
+    if object.poster_path
+      "#{BASE_URL}w#{POSTER_SIZE}#{object.poster_path}"
+    else
+      "http://placehold.it/#{poster_size}&text=#{object.title}"
+    end
   end
 
   def poster_width
     POSTER_SIZE
+  end
+
+  # Use in caution.
+  def poster_height
+    (poster_width * 1.5).to_i
+  end
+
+  # Use in caution.
+  def poster_size
+    "#{poster_width}x#{poster_height}"
   end
 end
