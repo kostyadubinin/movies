@@ -1,5 +1,5 @@
 class Movie
-  attr_reader :body
+  attr_reader :attributes
 
   def self.popular
     response = $tmdb.get "movie/popular"
@@ -31,96 +31,96 @@ class Movie
     new(response.body)
   end
 
-  def initialize(body)
-    @body = body
+  def initialize(attributes)
+    @attributes = attributes
   end
 
   def adult?
-    body["adult"]
+    attributes["adult"]
   end
 
   def backdrop_path
-    body["backdrop_path"]
+    attributes["backdrop_path"]
   end
 
   def collection
-    if body["belongs_to_collection"].present?
-      Collection.new(body["belongs_to_collection"])
+    if attributes["belongs_to_collection"].present?
+      Collection.new(attributes["belongs_to_collection"])
     end
   end
 
   def budget
-    return nil if body["budget"] == 0
-    body["budget"]
+    return nil if attributes["budget"] == 0
+    attributes["budget"]
   end
 
   def genres
-    body["genres"].map { |g| Genre.new(g) }
+    attributes["genres"].map { |g| Genre.new(g) }
   end
 
   def homepage
-    body["homepage"]
+    attributes["homepage"]
   end
 
   def id
-    body["id"]
+    attributes["id"]
   end
 
   def imdb_id
-    body["imdb_id"]
+    attributes["imdb_id"]
   end
 
   def original_language
-    body["original_language"]
+    attributes["original_language"]
   end
 
   def original_title
-    body["original_title"]
+    attributes["original_title"]
   end
 
   def overview
-    body["overview"]
+    attributes["overview"]
   end
 
   def popularity
-    return nil if body["popularity"] == 0
-    body["popularity"]
+    return nil if attributes["popularity"] == 0
+    attributes["popularity"]
   end
 
   def poster_path
-    body["poster_path"]
+    attributes["poster_path"]
   end
 
   def production_companies
-    body["production_companies"].map { |pc| ProductionCompany.new(pc) }
+    attributes["production_companies"].map { |pc| ProductionCompany.new(pc) }
   end
 
   def production_countries
-    body["production_countries"].map { |pc| ProductionCountry.new(pc) }
+    attributes["production_countries"].map { |pc| ProductionCountry.new(pc) }
   end
 
   def status
-    body["status"]
+    attributes["status"]
   end
 
   def tagline
-    body["tagline"]
+    attributes["tagline"]
   end
 
   def title
-    body["title"]
+    attributes["title"]
   end
 
   def video?
-    body["video"]
+    attributes["video"]
   end
 
   def vote_average
-    return nil if body["vote_average"] == 0.0
-    body["vote_average"]
+    return nil if attributes["vote_average"] == 0.0
+    attributes["vote_average"]
   end
 
   def vote_count
-    body["vote_count"]
+    attributes["vote_count"]
   end
 end
