@@ -19,10 +19,8 @@ gem "kaminari"
 gem "omniauth-facebook"
 gem "rails", "4.2.1"
 gem "sass-rails", "~> 4.0.3"
-gem "sdoc", "~> 0.4.0", group: :doc
 gem "turbolinks"
 gem "uglifier", ">= 1.3.0"
-gem "web-console", "~> 2.0", group: :development
 
 group :production do
   gem "pg"
@@ -31,7 +29,6 @@ end
 
 group :development do
   gem "quiet_assets"
-  gem "spring"
 end
 
 group :development, :test do
