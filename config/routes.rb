@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   get ":order", to: "movies#index", order: /top_rated|upcoming|now_playing/, as: :ordered_movies
   resources :movies, path: "/", only: %w(index)
 
-  resources :people, only: %w(index show)
-
   # auth
   get 'auth/:provider/callback', to: 'sessions#create'
   delete 'sign_out', to: 'sessions#destroy', as: 'sign_out'

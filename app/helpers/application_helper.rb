@@ -24,12 +24,6 @@ module ApplicationHelper
     "//www.youtube.com/embed/#{source}"
   end
 
-  def configuration
-    Rails.cache.fetch("tmdb/configuration", expires_in: 1.day) do
-      ConfigurationDecorator.decorate($tmdb.get("configuration").body)
-    end
-  end
-
   def flash_class(level)
     case level
     when "success" then "alert alert-success"
