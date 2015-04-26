@@ -57,6 +57,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.7)
     arel (6.0.0)
+    attr_extras (4.4.0)
     autoprefixer-rails (4.0.2.1)
       execjs
     awesome_print (1.2.0)
@@ -294,6 +295,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_link_to
+  attr_extras
   autoprefixer-rails
   bootstrap-sass
   bootswatch-rails

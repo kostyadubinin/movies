@@ -1,9 +1,5 @@
 class Collection
-  attr_reader :attributes
-
-  def initialize(attributes)
-    @attributes = attributes
-  end
+  pattr_initialize :attributes
 
   def name
     attributes["name"]

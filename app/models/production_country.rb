@@ -1,9 +1,5 @@
 class ProductionCountry
-  attr_reader :attributes
-
-  def initialize(attributes)
-    @attributes = attributes
-  end
+  pattr_initialize :attributes
 
   def iso_3166_1
     attributes["iso_3166_1"]

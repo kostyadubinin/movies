@@ -1,5 +1,5 @@
 class Movie
-  attr_reader :attributes
+  pattr_initialize :attributes
 
   def self.popular
     response = $tmdb.get "movie/popular"
@@ -29,10 +29,6 @@ class Movie
   def self.find(id)
     response = $tmdb.get "movie/#{id}"
     new(response.body)
-  end
-
-  def initialize(attributes)
-    @attributes = attributes
   end
 
   def adult?

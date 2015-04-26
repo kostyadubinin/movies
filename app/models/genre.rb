@@ -1,9 +1,5 @@
 class Genre
-  attr_reader :attributes
-
-  def initialize(attributes)
-    @attributes = attributes
-  end
+  pattr_initialize :attributes
 
   def id
     attributes["id"]

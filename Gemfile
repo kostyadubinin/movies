@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "2.2.0"
 
 gem "active_link_to"
+gem "attr_extras"
 gem "autoprefixer-rails"
 gem "bootstrap-sass"
 gem "bootswatch-rails"
