@@ -3,22 +3,22 @@ class Movie
 
   def self.popular
     response = $tmdb.get "movie/popular"
-    response.body["results"].map { |movie_attrs| new(movie_attrs) }
+    MovieCollection.new(response.body)
   end
 
   def self.upcoming
     response = $tmdb.get "movie/upcoming"
-    response.body["results"].map { |movie_attrs| new(movie_attrs) }
+    MovieCollection.new(response.body)
   end
 
   def self.now_playing
     response = $tmdb.get "movie/now_playing"
-    response.body["results"].map { |movie_attrs| new(movie_attrs) }
+    MovieCollection.new(response.body)
   end
 
   def self.top_rated
     response = $tmdb.get "movie/top_rated"
-    response.body["results"].map { |movie_attrs| new(movie_attrs) }
+    MovieCollection.new(response.body)
   end
 
   def self.latest
