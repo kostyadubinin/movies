@@ -19,11 +19,11 @@ class MovieCollection
     body["total_results"]
   end
 
+  private
+
   def method_missing(m, *args, &block)
     movies.public_send(m, *args, &block)
   end
-
-  private
 
   attr_reader :body
 
