@@ -7,7 +7,7 @@ class MovieCollection
     @body = body
   end
 
-  def page
+  def current_page
     body["page"]
   end
 

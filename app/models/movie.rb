@@ -2,23 +2,19 @@ class Movie
   pattr_initialize :attributes
 
   def self.popular
-    response = $tmdb.get "movie/popular"
-    MovieCollection.new(response.body)
+    Criteria.new("movie/popular")
   end
 
   def self.upcoming
-    response = $tmdb.get "movie/upcoming"
-    MovieCollection.new(response.body)
+    Criteria.new("movie/upcoming")
   end
 
   def self.now_playing
-    response = $tmdb.get "movie/now_playing"
-    MovieCollection.new(response.body)
+    Criteria.new("movie/now_playing")
   end
 
   def self.top_rated
-    response = $tmdb.get "movie/top_rated"
-    MovieCollection.new(response.body)
+    Criteria.new("movie/top_rated")
   end
 
   def self.latest
