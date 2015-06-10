@@ -1,4 +1,8 @@
 class MovieCollection
+  extend Forwardable
+
+  def_delegator :movies, :respond_to?
+
   def initialize(body)
     @body = body
   end
