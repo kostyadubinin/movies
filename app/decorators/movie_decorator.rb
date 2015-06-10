@@ -9,7 +9,7 @@ class MovieDecorator < Draper::Decorator
     if object.poster_path
       "#{BASE_URL}w#{POSTER_SIZE}#{object.poster_path}"
     else
-      "http://placehold.it/#{poster_size}&text=#{object.title}"
+      "http://placehold.it/#{poster_size}?text=#{object.title}"
     end
   end
 
