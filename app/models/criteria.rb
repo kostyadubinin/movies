@@ -25,6 +25,7 @@ class Criteria
     @movies = fetch_movies
   end
 
+  # TODO: Fix multiple requests.
   def fetch_movies
     response = $tmdb.get path, page: page_number || 1
     MovieCollection.new(response.body)
