@@ -1,6 +1,20 @@
 class Movie
   pattr_initialize :attributes
 
+  # TODO: add tests
+  def self.order(order)
+    return Movie.popular if order.nil?
+
+    case order.to_s
+    when "popular"     then Movie.popular
+    when "top_rated"   then Movie.top_rated
+    when "upcoming"    then Movie.upcoming
+    when "now_playing" then Movie.now_playing
+    else
+      fail "Movies cannot be ordered by #{order}"
+    end
+  end
+
   def self.popular
     Criteria.new("movie/popular")
   end
