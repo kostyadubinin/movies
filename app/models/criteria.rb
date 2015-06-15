@@ -8,7 +8,7 @@ class Criteria
   end
 
   def page(page_number)
-    @page_number = page_number
+    @page_number = page_number.nil? ? 1 : page_number.to_i
     self
   end
 
@@ -21,11 +21,10 @@ class Criteria
   end
 
   def movies
-    return movies if @movies && @movies.current_page == page_number
+    return @movies if @movies && @movies.current_page == page_number
     @movies = fetch_movies
   end
 
-  # TODO: Fix multiple requests.
   def fetch_movies
     response = $tmdb.get path, page: page_number || 1
     MovieCollection.new(response.body)
