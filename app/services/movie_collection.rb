@@ -1,4 +1,7 @@
 class MovieCollection
+  MAX_PAGE = 1000
+  MOVIES_PER_PAGE = 20
+
   extend Forwardable
 
   def_delegator :movies, :respond_to?
@@ -17,6 +20,10 @@ class MovieCollection
 
   def total_results
     body["total_results"]
+  end
+
+  def total_paginatable_results
+    [total_results, MAX_PAGE * MOVIES_PER_PAGE].min
   end
 
   private

@@ -7,3 +7,6 @@
       %a.thumbnail
         = image_tag movie.poster_url, alt: movie.title, width: movie.poster_width
     = responsive_columns_fix(i, xs: 2, sm: 4, md: 4, lg: 4)
+
+.row
+  .col-xs-12.text-center= paginate @movies
