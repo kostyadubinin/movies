@@ -1,7 +1,4 @@
 .row
-  .col-sm-12
-    = render "order_nav"
-.row
   - @movies.to_enum.with_index(1) do |movie, i|
     .col-xs-6.col-sm-3
       %a.thumbnail
