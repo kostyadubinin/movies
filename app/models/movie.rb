@@ -109,6 +109,20 @@ class Movie
     attributes["production_countries"].map { |pc| ProductionCountry.new(pc) }
   end
 
+  def release_date
+    attributes["release_date"]
+  end
+
+  def revenue
+    return nil if attributes["revenue"] == 0
+    attributes["revenue"]
+  end
+
+  def runtime
+    return nil if attributes["runtime"] == 0
+    attributes["runtime"]
+  end
+
   def status
     attributes["status"]
   end

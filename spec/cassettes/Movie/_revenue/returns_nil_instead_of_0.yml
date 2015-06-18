@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/550?api_key=TMDB_API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=21600
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 18 Jun 2015 20:37:34 GMT
+      Etag:
+      - W/"07a27529c2c6c883f2185bf3b1a37a18"
+      Server:
+      - openresty
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Memc:
+      - HIT
+      X-Memc-Age:
+      - '944'
+      X-Memc-Expires:
+      - '20656'
+      X-Memc-Key:
+      - f5d8d6d123f674ea3be4bd53fba9acb2
+      X-Ratelimit-Limit:
+      - '40'
+      X-Ratelimit-Remaining:
+      - '38'
+      X-Ratelimit-Reset:
+      - '1434659863'
+      Content-Length:
+      - '794'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg","belongs_to_collection":null,"budget":63000000,"genres":[{"id":18,"name":"Drama"}],"homepage":"","id":550,"imdb_id":"tt0137523","original_language":"en","original_title":"Fight
+        Club","overview":"A ticking-time-bomb insomniac and a slippery soap salesman
+        channel primal male aggression into a shocking new form of therapy. Their
+        concept catches on, with underground \"fight clubs\" forming in every town,
+        until an eccentric gets in the way and ignites an out-of-control spiral toward
+        oblivion.","popularity":3.146334,"poster_path":"/811DjJTon9gD6hZ8nCjSitaIXFQ.jpg","production_companies":[{"name":"Taurus
+        Film","id":20555},{"name":"Regency Enterprises","id":508},{"name":"Fox 2000
+        Pictures","id":711},{"name":"Linson Films","id":54050},{"name":"Atman Entertainment","id":54051},{"name":"Knickerbocker
+        Films","id":54052}],"production_countries":[{"iso_3166_1":"DE","name":"Germany"},{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"1999-10-14","revenue":100853753,"runtime":139,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"How
+        much can you know about yourself if you''ve never been in a fight?","title":"Fight
+        Club","video":false,"vote_average":7.8,"vote_count":3527}'
+    http_version: 
+  recorded_at: Thu, 18 Jun 2015 20:37:34 GMT
+recorded_with: VCR 2.9.3

@@ -71,6 +71,37 @@ describe Movie, :vcr do
     expect(movie.overview).to eq("Dracula")
   end
 
+  describe "#release_date" do
+    it "returns release date of the movie" do
+      movie_attributes["release_date"] = "2015-05-15"
+      expect(movie.release_date).to eq("2015-05-15")
+    end
+  end
+
+  describe "#revenue" do
+    it "returns movie's revenue" do
+      movie_attributes["revenue"] = "100853753"
+      expect(movie.revenue).to eq("100853753")
+    end
+
+    it "returns nil instead of 0" do
+      movie_attributes["revenue"] = 0
+      expect(movie.revenue).to be_nil
+    end
+  end
+
+  describe "#runtime" do
+    it "returns movie's runtime" do
+      movie_attributes["runtime"] = 139
+      expect(movie.runtime).to eq(139)
+    end
+
+    it "returns nil instead of 0" do
+      movie_attributes["runtime"] = 0
+      expect(movie.runtime).to eq(nil)
+    end
+  end
+
   describe "#popularity" do
     it "returns popularity of the movie" do
       movie_attributes["popularity"] = 2.50307202280779
