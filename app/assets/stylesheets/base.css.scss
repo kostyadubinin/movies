@@ -29,3 +29,12 @@ h1.page-header {
   color: black;
   opacity: 0.6;
 }
+
+/* From Bootstrap docs.
+   Rendering problems can arise when you have dozens of inline labels within a
+   narrow container, each containing its own inline-block element (like an
+   icon). The way around this is setting display: inline-block;. For context and
+   an example. See https://github.com/twbs/bootstrap/issues/13219. */
+.label {
+  display: inline-block;
+}
